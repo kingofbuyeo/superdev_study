@@ -120,7 +120,7 @@ router.get('/view/:id', (req, res) => {
 });
 
 
-router.post('/deleteBoard/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
     let boardId = req.params.id;
     let boardNewModel = [];
     for(let i = 0; i < boardModel.length; i ++){
@@ -131,7 +131,6 @@ router.post('/deleteBoard/:id', (req, res) => {
         }
         boardNewModel.push(board);
     }
-    console.log(boardNewModel);
     boardModel = boardNewModel;
     res.json({
         "result":"success"

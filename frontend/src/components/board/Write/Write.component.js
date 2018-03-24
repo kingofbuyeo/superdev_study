@@ -1,5 +1,5 @@
 export default {
-  name: 'modify',
+  name: 'write',
   components: {},
   props: [],
   data () {

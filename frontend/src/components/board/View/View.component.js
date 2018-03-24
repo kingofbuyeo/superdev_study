@@ -42,8 +42,8 @@ export default {
       if(id == null || id == ""){
         return;
        }
-       this.$http.post(`/api/board/deleteBoard/${id}`).then((response) => {
-       console.log(response);
+       this.$http.delete(`/api/board/${id}`).then((response) => {
+
 
           this.board = response.data;
           if(response.data.result == "success"){
